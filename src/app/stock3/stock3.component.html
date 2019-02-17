@@ -1,0 +1,12 @@
+<div class="stock">
+  <p>这是股票详情页</p>
+  <p>
+    在URL中传递数据在路由配置中配参数
+  </p>
+  <p> 在URL中传递数据在路由配置中配参数{{stockId}}</p>
+  <p>isPro属性是：{{isPro}}</p>
+  <input type="button" name="" value="关注" (click)="focus=true">
+  <a [routerLink]="['./',10]">买家列表</a>
+  <a [routerLink]="['./seller',100]">卖家列表</a>
+  <router-outlet></router-outlet>
+</div>

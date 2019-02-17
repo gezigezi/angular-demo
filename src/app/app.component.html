@@ -1,0 +1,13 @@
+<a [routerLink]="['/home']">主页</a>
+<a [routerLink]="['/stock']" [queryParams]="{id:0}">在查询参数中传递数据</a>
+<a [routerLink]="['/stock1',1.1]">快照1</a>
+<input type="button" name="" value="快照1.2" (click)="toStockDetail()">
+<a [routerLink]="['/stock2',2.1]">订阅</a>
+<input type="button" name="" value="订阅2.2" (click)="toHomeDetail()">
+<a [routerLink]="['/stock3',3.1]">股票详情</a>
+<a [routerLink]="['/stock4',4]">股票详情resolve</a>
+<span>在URL中传递数据在路由配置中配参数</span>
+<a [routerLink]="[{outlets:{primary:'home',oux:'consult'}}]">开始咨询</a>
+<a [routerLink]="[{outlets:{oux:null}}]">结束咨询</a>
+<router-outlet></router-outlet>
+<router-outlet name="oux"></router-outlet>
