@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router, UrlHandlingStrategy } from "@angular/router";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,5 +13,15 @@ export class AppComponent {
   }
   toStockDetail() {
     this.router.navigate(['/stock1', 1.2])
+  }
+  ngOnInit(){
+    this.changeUrl();
+  }
+  changeUrl(){
+    let text=window.location.href;
+    text.toString();
+    debugger
+    let url=text.replace(/#/,'index.html#');
+    window.history.pushState({},'0',url);
   }
 }
